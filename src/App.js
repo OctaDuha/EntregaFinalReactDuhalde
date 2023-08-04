@@ -1,15 +1,15 @@
 import React from "react";
+import "./App.css";
 import Navbar from "./Navbar";
-import ItemListContainer from "./ItemListContainer";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
-const App = () => {
+function App() {
   return (
-    <div>
+    <div className="App">
       <Navbar />
-      <ItemListContainer greeting="¡Bienvenido/a a nuestra tienda en línea!" />
-      {/* Resto del contenido de la aplicación */}
+      <ItemListContainer greeting={"Bienvenidos"} />
     </div>
   );
-};
+}
 
 export default App;
