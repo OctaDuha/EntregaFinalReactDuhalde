@@ -1,4 +1,4 @@
-import cart from "./assets";
+import cart from "./assets/Esferas del dragón.png";
 
 const CartWidget = () => {
   return (
