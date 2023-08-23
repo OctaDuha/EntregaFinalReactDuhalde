@@ -13,7 +13,7 @@ const NavBar = () => {
           itemUno="Botines"
           itemDos="Pelota"
           itemTres="Guantes"
-          itemCuatro="Canillera"
+          itemCuatro="Canilleras"
         />
       </nav>
       <div className="containerCart">

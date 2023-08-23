@@ -5,11 +5,15 @@ import ButtonDetalles from "./ButtonDetalles";
 import ButtonAddCart from "./ButtonAddCart";
 import ImgPrueba from "@mui/icons-material/SportsSoccer";
 
-const CardItem = () => {
+const CardItem = (props) => {
   return (
     <div className="CardItems">
-      <Image Image={ImgPrueba} />
-      <Description title="Pelota de futbol" cantidad={50} precio={10000} />
+      <Image Image={props.imagen} />
+      <Description
+        title={props.title}
+        cantidad={props.cantidad}
+        precio={props.precio}
+      />
       <div className="Buttons">
         <ButtonDetalles />
         <ButtonAddCart />

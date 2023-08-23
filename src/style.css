@@ -15,6 +15,7 @@ header{
     display: flex;
 }
 
+/*container brand*/
 header .containerBrand{
     min-width: 20%;
     height: 100%;
@@ -26,6 +27,7 @@ header .containerBrand img{
     transform: scale(0.55);
 }
 
+/*containerList*/
 header .containerItemList{
     width: 70%;
     height: 100%;
@@ -42,11 +44,12 @@ header .containerItemList ul{
 }
 
 header .containerItemList ul li{
+    text-decoration: none;
     margin: 10px;
     color: var(--color-txt-nav);
-    cursor: pointer;
 }
 
+/*containerCart*/
 header .containerCart{
     width: 10%;
     height: 100%;
