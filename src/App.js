@@ -1,14 +1,14 @@
 import React from "react";
-import "./App.css";
-import Navbar from "./components/NavBar/NavBar";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import "./style.css";
+import Navbar from "./components/header/NavBar";
+import CardItem from "./components/components item/CardItem";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Navbar />
-      <ItemListContainer greeting={"Bienvenidos"} />
-    </div>
+      <CardItem />
+    </>
   );
 }
 
