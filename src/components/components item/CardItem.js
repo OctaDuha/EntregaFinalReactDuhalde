@@ -1,20 +1,20 @@
+import React from "react";
 import Image from "./Image";
 import Description from "./Description";
 import "../../styles/carditem.css";
 import ButtonDetalles from "./ButtonDetalles";
 import ButtonAddCart from "./ButtonAddCart";
-import ImgPrueba from "@mui/icons-material/SportsSoccer";
 
 const CardItem = (props) => {
   return (
-    <div className="CardItems">
-      <Image Image={props.imagen} />
+    <div className="cardItem">
+      <Image image={props.imagen} />
       <Description
         title={props.title}
         cantidad={props.cantidad}
         precio={props.precio}
       />
-      <div className="Buttons">
+      <div className="buttons">
         <ButtonDetalles />
         <ButtonAddCart />
       </div>

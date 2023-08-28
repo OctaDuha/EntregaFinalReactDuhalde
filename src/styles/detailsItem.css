@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.detailsItem {
+.DetailsItem {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -12,7 +12,7 @@
 }
 
 /* containerLeft */
-.detailsItem .containerLeft {
+.DetailsItem .containerLeft {
     width: 35%;
     display: flex;
     justify-content: center;
@@ -20,18 +20,18 @@
     min-height: 600px;
 }
 
-.detailsItem .containerLeft .cardImg {
+.DetailsItem .containerLeft .cardImg {
     display: flex;
     justify-content: center;
     
 }
 
-.detailsItem .containerLeft Img{
+.DetailsItem .containerLeft Img{
     width: 100%;
 }
 
 /* containerRigth */
-.detailsItem .containerRigth {
+.DetailsItem .containerRigth {
     width: 35%;
     display: flex;
     flex-direction: column;
@@ -40,13 +40,13 @@
     min-height: 600px;
 }
 
-.detailsItem .containerRigth .descriptionItem {
+.DetailsItem .containerRigth .descriptionItem {
     display: flex;
     flex-direction: column;
 
 }
 
-.detailsItem .containerRigth .cardDescription {
+.DetailsItem .containerRigth .cardDescription {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -56,38 +56,38 @@
 
 
 /* title */
-.detailsItem .containerRigth .cardDescription .title {
+.DetailsItem .containerRigth .cardDescription .title {
     font-size: 45px;
     margin: 10px 0;
 }
 
 /* description */
-.detailsItem .containerRigth .cardDescription .description {
+.DetailsItem .containerRigth .cardDescription .description {
     display: flex;
     flex-direction: column;
     margin: 10px 0;
 }
 
-.detailsItem .containerRigth .cardDescription .description .descriptionTitle {
+.DetailsItem .containerRigth .cardDescription .description .descriptionTitle {
     font-weight: bold;
     font-size: 18px;
     margin: 10px 0;
 }
 
-.detailsItem .containerRigth .cardDescription .description .parrafo {
+.DetailsItem .containerRigth .cardDescription .description .parrafo {
     font-size: 18px;
     margin: 10px 0;
 }
 
 /* stock */
-.detailsItem .containerRigth .cardDescription .cant{
+.DetailsItem .containerRigth .cardDescription .cant{
     font-size: 18px;
     margin: 10px 0;
 }
 
 
 /* precio */
-.detailsItem .containerRigth .cardDescription .precio{
+.DetailsItem .containerRigth .cardDescription .precio{
     color: #5b00fb;
     font-weight: bold;
     font-size: 55px;
@@ -95,7 +95,7 @@
 }
 
 /* buttons */
-.detailsItem .containerRigth .buttons {
+.DetailsItem .containerRigth .buttons {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -103,7 +103,7 @@
     margin: 10px 0;
 }
 
-.detailsItem .containerRigth .buttons .addCantCart{
+.DetailsItem .containerRigth .buttons .addCantCart{
     width: 48%;
     display: flex;
     justify-content: center;
@@ -113,12 +113,12 @@
     height: 60px;
 }
 
-.detailsItem .containerRigth .buttons .addCantCart span {
+.DetailsItem .containerRigth .buttons .addCantCart span {
     font-weight: 20px;
     margin: 0 10px;
 }
 
-.detailsItem .containerRigth .buttons .addCantCart div {
+.DetailsItem .containerRigth .buttons .addCantCart div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,7 +127,7 @@
 
 
 
-.detailsItem .containerRigth .buttons .addCantCart div #quitar, .detailsItem .containerRigth .buttons .addCantCart div #aumentar {
+.DetailsItem .containerRigth .buttons .addCantCart div #quitar, .detailsItem .containerRigth .buttons .addCantCart div #aumentar {
     background-color: #5b00fb;
     border: none;
     color: white;
@@ -137,7 +137,7 @@
     font-size: 20px;
 }
 
-.detailsItem .containerRigth .buttons #detalles{
+.DetailsItem .containerRigth .buttons #detalles{
     width: 48%;
     background-color: #5b00fb;
     border-radius: 50px;

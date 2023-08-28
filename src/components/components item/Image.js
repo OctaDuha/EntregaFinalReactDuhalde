@@ -1,7 +1,9 @@
-const Image = () => {
+import React from "react";
+
+const Image = (props) => {
   return (
     <div className="containerImg">
-      <img src={props.imagen}></img>
+      <img src={props.image} height={100} width={100}></img>
     </div>
   );
 };

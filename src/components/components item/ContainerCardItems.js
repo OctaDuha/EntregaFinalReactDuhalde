@@ -1,3 +1,4 @@
+import React from "react";
 import CardItem from "./CardItem";
 import fetchSimulation from "../../utils/fetchSimulation";
 import productos from "../../utils/products";
@@ -10,25 +11,26 @@ const ContainerCardItems = () => {
   const { idCategory } = useParams();
 
   useEffect(() => {
-    if (idCategory !== undefined) {
+    if (idCategory === undefined) {
       fetchSimulation(productos, 2000)
         .then((resp) => setDatos(resp))
         .catch((error) => console.log(error));
     } else {
       fetchSimulation(
-        productos.filter((filter) => filter.type == idCategory),
+        productos.filter((item) => item.category === idCategory),
         2000
       )
         .then((resp) => setDatos(resp))
         .catch((error) => console.log(error));
     }
   }, [idCategory]);
+
   return (
     <div className="containerCardItems">
       {datos.map((product) => (
         <CardItem
-          key={product.id}
-          imagen={product.imageProductos.firtsImage}
+          key={`${product.id}-${product.category}`}
+          imagen={product.img}
           title={product.title}
           cantidad={product.stock}
           precio={product.price}

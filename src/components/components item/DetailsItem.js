@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "./Image";
 import Description from "./Description";
 import "../../styles/detailsItem.css";

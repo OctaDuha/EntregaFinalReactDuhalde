@@ -7,7 +7,7 @@ const productos = [
     img:
       "https://www.digitalsport.com.ar/files/products/624b1bc16431e-565339-1200x1200.jpg",
     stock: 50,
-    description: "Pelota Futbol Classic Qatar 2022 Nº 5 Certificada Fifa",
+    title: "Pelota Futbol Classic Qatar 2022 Nº 5 Certificada Fifa",
   },
   {
     id: "2",
@@ -17,7 +17,7 @@ const productos = [
     img:
       "https://http2.mlstatic.com/D_NQ_NP_608901-MLA32720369291_102019-O.webp",
     stock: 40,
-    description: "Guante Arquero Attrakt Solid Reusch Futbol Profesional",
+    title: "Guante Arquero Attrakt Solid Reusch Futbol Profesional",
   },
   {
     id: "3",
@@ -27,7 +27,7 @@ const productos = [
     img:
       "https://kavak.com.ar/wp-content/uploads/32171ND-BOTIN-KAPPA-STADIUM-TG-ENT-NEG-DA-A.jpg",
     stock: 60,
-    description: "Botines De Futbol Kappa Victory Fg Negro",
+    title: "Botines De Futbol Kappa Victory Fg Negro",
   },
 
   {
@@ -38,7 +38,7 @@ const productos = [
     img:
       "https://redsport.vteximg.com.br/arquivos/ids/554811-1000-1000/GA025010598.jpg?v=636111920231800000",
     stock: 80,
-    description: "Canilleras Nike Talle M",
+    title: "Canilleras Nike Talle M",
   },
 ];
 

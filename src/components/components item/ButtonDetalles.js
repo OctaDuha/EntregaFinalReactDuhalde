@@ -1,5 +1,7 @@
+import React from "react";
+
 const ButtonDetalles = () => {
-  return <button id="detalles"> Ver detalles</button>;
+  return <button className="ButtonsDetalles">Ver detalles</button>;
 };
 
 export default ButtonDetalles;
