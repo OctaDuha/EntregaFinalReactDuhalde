@@ -84,6 +84,8 @@
     color: white;
     font-size: 20px;
     border: none;
+    text-align: center;
+    padding: 15px;
 }
 
 .ButtonsDetalles:hover{
