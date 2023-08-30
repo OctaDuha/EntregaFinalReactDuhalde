@@ -31,7 +31,7 @@ const productos = [
   },
 
   {
-    id: "3",
+    id: "4",
     name: "Canilleras de futbol",
     price: 3000,
     category: "Canilleras",

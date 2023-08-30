@@ -5,17 +5,18 @@ import "../../styles/carditem.css";
 import ButtonDetalles from "./ButtonDetalles";
 import ButtonAddCart from "./ButtonAddCart";
 
-const CardItem = (props) => {
+const CardItem = ({ product }) => {
+  console.log(product);
   return (
     <div className="cardItem">
-      <Image image={props.imagen} />
+      <Image image={product.img} />
       <Description
-        title={props.title}
-        cantidad={props.cantidad}
-        precio={props.precio}
+        title={product.title}
+        cantidad={product.stock}
+        precio={product.price}
       />
       <div className="buttons">
-        <ButtonDetalles />
+        <ButtonDetalles id={product.id} />
         <ButtonAddCart />
       </div>
     </div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ButtonDetalles = (props) => {
   return (
-    <Link to={`/item/${props.id}`} className="ButtonsDetalles">
+    <Link to={`/items/${props.id}`} className="ButtonsDetalles">
       Ver detalles
     </Link>
   );

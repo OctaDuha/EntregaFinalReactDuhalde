@@ -28,13 +28,7 @@ const ContainerCardItems = () => {
   return (
     <div className="containerCardItems">
       {datos.map((product) => (
-        <CardItem
-          key={`${product.id}-${product.category}`}
-          imagen={product.img}
-          title={product.title}
-          cantidad={product.stock}
-          precio={product.price}
-        />
+        <CardItem product={product} />
       ))}
     </div>
   );
