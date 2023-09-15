@@ -1,26 +1,34 @@
 import React from "react";
 import Brand from "./Brand";
-import ItemListContainer from "./ItemListContainer";
-import CardWidget from "./CardWidget";
+import ItemListContainer from "./ItemsListContainer";
+import CartWidget from "./CartWidget";
+import ContainerCart from "./ContainerCart";
+import ContextCart from "./ContextCart";
 
 const NavBar = () => {
   return (
-    <header>
-      <div className="containerBrand">
-        <Brand />
-      </div>
-      <nav className="containerItemList">
-        <ItemListContainer
-          itemUno="Botines"
-          itemDos="Pelota"
-          itemTres="Guantes"
-          itemCuatro="Canilleras"
-        />
-      </nav>
-      <div className="containerCart">
-        <CardWidget />
-      </div>
-    </header>
+    <ContextCart>
+      <header>
+        <div className="containerBrand">
+          <Brand />
+        </div>
+
+        <nav className="containerItemList">
+          <ItemListContainer
+            itemUno="Botines"
+            itemDos="Pelotas"
+            itemTres="Guantes"
+            itemCuatro="Canilleras"
+          />
+        </nav>
+
+        <div className="containerCart">
+          <CartWidget />
+        </div>
+
+        <ContainerCart />
+      </header>
+    </ContextCart>
   );
 };
 

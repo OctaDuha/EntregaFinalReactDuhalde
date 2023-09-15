@@ -6,7 +6,6 @@ import ButtonDetalles from "./ButtonDetalles";
 import ButtonAddCart from "./ButtonAddCart";
 
 const CardItem = ({ product }) => {
-  console.log(product);
   return (
     <div className="cardItem">
       <Image image={product.img} />
@@ -17,7 +16,7 @@ const CardItem = ({ product }) => {
       />
       <div className="buttons">
         <ButtonDetalles id={product.id} />
-        <ButtonAddCart />
+        <ButtonAddCart id={product.id} />
       </div>
     </div>
   );
