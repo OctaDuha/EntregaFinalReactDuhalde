@@ -6,6 +6,7 @@ import clear from "../../img/clear.svg";
 import { useContext } from "react";
 import { controllerShowCart } from "./ContextCart";
 import { listCartContext } from "../components item/ProviderContextListCart";
+import { Link } from "react-router-dom";
 
 const ContainerCart = () => {
   const { cartShow, setCartShow } = useContext(controllerShowCart);
@@ -47,7 +48,9 @@ const ContainerCart = () => {
       </div>
 
       <div className="TerminarCompra">
-        <button className="terminar">Terminar compra</button>
+        <Link to="/src/components/CheckOut/Checkout.js">
+          <button className="terminar">Terminar compra</button>
+        </Link>
 
         <button className="clear" onClick={clearCart}>
           <img src={clear}></img>
