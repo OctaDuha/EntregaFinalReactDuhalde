@@ -1,7 +1,7 @@
-import { collection, getDoc } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { db } from "../../service/firebase";
+import { collection, getDoc, query, where } from "firebase/firestore";
 import fetchSimultion from "../../utils/fetchSimulation";
 import productos from "../../utils/products";
 import CardItem from "./CardItem";
@@ -9,9 +9,9 @@ import CardItem from "./CardItem";
 const DetailsItem = (props) => {
   const [product, setProduct] = useState();
   const { idItem } = useParams();
-  const [producto, setProducto] = useState({});
+  // const [producto, setProducto] = useState({});
   const [loader, setLoader] = useState(false);
-  const { id, doc } = useParams();
+  // const { id, doc } = useParams();
   const [error, setError] = useState();
 
   //useEffect(() => {
@@ -22,10 +22,15 @@ const DetailsItem = (props) => {
 
   useEffect(() => {
     setLoader(true);
-    const collectionProd = collection(db, "productos");
-    const referenciaAlDoc = doc(collectionProd, id);
-    getDoc(referenciaAlDoc)
-      .then((res) => setProducto({ id: res.id, ...res.data() }))
+    const products = collection(db, "productos");
+    getDoc(products)
+      .then((res) => {
+        const product = res.docs.filter((p) => {
+          return p.id === idItem;
+        });
+
+        setProduct({ id: product.id, ...product.data() });
+      })
       .catch((e) => setError(e))
       .finally(() => setLoader(false));
   }, []);
