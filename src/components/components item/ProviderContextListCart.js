@@ -22,7 +22,7 @@ const ProviderContextListCart = ({ children }) => {
     });
   }, []);
 
-  const addProduct = (id) => {
+  const addProduct = (id, selectedQuantity) => {
     //producto a añadir al carrito
     const productAdd = productos.find((product) => product.id === id);
 
@@ -35,7 +35,10 @@ const ProviderContextListCart = ({ children }) => {
         let quantity = product.quantity;
 
         if (quantity < productAdd.stock) {
-          const newQuantity = { ...product, quantity: quantity + 1 };
+          const newQuantity = {
+            ...product,
+            quantity: quantity + selectedQuantity,
+          };
           setListCart([...productsToMaintain, newQuantity]);
         }
 
@@ -44,7 +47,11 @@ const ProviderContextListCart = ({ children }) => {
       }
     }
 
-    add && setListCart([...productsToMaintain, { ...productAdd, quantity: 1 }]);
+    add &&
+      setListCart([
+        ...productsToMaintain,
+        { ...productAdd, quantity: selectedQuantity },
+      ]);
   };
 
   const clearCart = () => {
