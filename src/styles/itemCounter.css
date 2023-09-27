@@ -1,0 +1,47 @@
+.Counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .Controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .Button {
+    width: 40px;
+    height: 40px;
+    background-color: #5b00fb;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .Number {
+    font-size: 24px;
+    color: #5b00fb;
+  }
+  
+  .ButtonAddCart {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #5b00fb;
+    border-radius: 50px;
+    height: 60px;
+    background-color: white;
+    font-weight: bold;
+    color: #5b00fb;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  

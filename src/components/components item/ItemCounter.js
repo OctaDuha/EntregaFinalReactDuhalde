@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ButtonAddCart from "./ButtonAddCart";
+import "../../styles/itemCounter.css";
 
 const ItemCounter = ({ product }) => {
   const [quantity, setQuantity] = useState(1);

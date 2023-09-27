@@ -1,13 +1,31 @@
 import React, { useState, useContext } from "react";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import ContextCart from "../header/ContextCart";
+import { listCartContext } from "../components item/ProviderContextListCart";
 import { db } from "../../service/firebase";
+import "../../styles/checkout.css";
 
 const Checkout = () => {
   const [user, setUser] = useState({});
   const [validateEmail, setValidateEmail] = useState("");
   const [orderId, setOrderId] = useState("");
-  const { cart, total, clear } = useContext(ContextCart);
+  const { listCart = [], clearCart } = useContext(listCartContext);
+
+  console.log("listCart", listCart);
+  console.log("order id", orderId);
+
+  const calcularTotal = () => {
+    let totalPrice = 0;
+
+    for (let i = 0; i < listCart.length; i++) {
+      const product = listCart[i];
+
+      const subtotal = product.quantity * product.price;
+
+      totalPrice += subtotal;
+    }
+
+    return totalPrice;
+  };
 
   const datosComprador = (e) => {
     setUser({
@@ -23,22 +41,23 @@ const Checkout = () => {
     } else {
       let orders = {
         user,
-        item: cart,
-        price: total,
-        date: serverTimestamp,
+        item: listCart,
+        price: calcularTotal(),
+        date: serverTimestamp(),
       };
       const ventas = collection(db, "orders");
       addDoc(ventas, orders)
         .then((res) => {
+          console.log("order set", res.id);
           setOrderId(res.id);
-          clear();
+          clearCart();
         })
         .catch((error) => console.log(error));
     }
   };
 
   return (
-    <div>
+    <div style={{ marginTop: "100px" }}>
       {orderId !== "" ? (
         <div>
           <h2>Felicitaciones! Tu orden fue generada con éxito!</h2>
@@ -47,6 +66,7 @@ const Checkout = () => {
       ) : (
         <div>
           <h2>Termina compra</h2>
+          <h5>Precio total: {calcularTotal()}</h5>
           <h5>Por favor completar sus datos para continuar</h5>
           <form onSubmit={finalizarCompra}>
             <label className="form-label">Nombre Completo</label>

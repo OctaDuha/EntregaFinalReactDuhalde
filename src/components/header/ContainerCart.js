@@ -12,8 +12,6 @@ const ContainerCart = () => {
   const { cartShow, setCartShow } = useContext(controllerShowCart);
   const { listCart, clearCart } = useContext(listCartContext);
 
-  // console.log("listCart", listCart);
-
   const style = {
     display: cartShow,
   };
@@ -48,7 +46,7 @@ const ContainerCart = () => {
       </div>
 
       <div className="TerminarCompra">
-        <Link to="/src/components/CheckOut/Checkout.js">
+        <Link to="/checkout">
           <button className="terminar">Terminar compra</button>
         </Link>
 
